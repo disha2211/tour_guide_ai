@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19018867-d3a4-4832-af52-a70173e48cd8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
-    </list>
+    <list default="true" id="19018867-d3a4-4832-af52-a70173e48cd8" name="Changes" comment="created file for image embeddings" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,6 +97,37 @@
       <option name="presentableId" value="Default" />
       <updated>1779438283504</updated>
     </task>
+    <task id="LOCAL-00001" summary="created file to add database">
+      <option name="closed" value="true" />
+      <created>1779439014007</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779439014007</updated>
+    </task>
+    <task id="LOCAL-00002" summary="skeleton for workflow">
+      <option name="closed" value="true" />
+      <created>1779439207802</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779439207802</updated>
+    </task>
+    <task id="LOCAL-00003" summary="created file for image embeddings">
+      <option name="closed" value="true" />
+      <created>1779439306207</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779439306207</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created file to add database" />
+    <MESSAGE value="skeleton for workflow" />
+    <MESSAGE value="created file for image embeddings" />
+    <option name="LAST_COMMIT_MESSAGE" value="created file for image embeddings" />
   </component>
 </project>
