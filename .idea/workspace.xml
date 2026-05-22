@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19018867-d3a4-4832-af52-a70173e48cd8" name="Changes" comment="created file for image embeddings" />
+    <list default="true" id="19018867-d3a4-4832-af52-a70173e48cd8" name="Changes" comment="added requirements" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,13 +121,31 @@
       <option name="project" value="LOCAL" />
       <updated>1779439306207</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="created requirements.txt">
+      <option name="closed" value="true" />
+      <created>1779439369387</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779439369387</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added requirements">
+      <option name="closed" value="true" />
+      <created>1779439427377</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779439427377</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created file to add database" />
     <MESSAGE value="skeleton for workflow" />
     <MESSAGE value="created file for image embeddings" />
-    <option name="LAST_COMMIT_MESSAGE" value="created file for image embeddings" />
+    <MESSAGE value="created requirements.txt" />
+    <MESSAGE value="added requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="added requirements" />
   </component>
 </project>
