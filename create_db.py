@@ -21,8 +21,16 @@ img_collection = client_db.create_collection(
 	)
 
 #for each category
+for dir_ in os.listdir(DATA_PATH):
+	dir_path = os.path.join(DATA_PATH, dir_)
 
 #add images to images_collection
+#----------------docs -> add data
+img_collection.add(
+	    ids=[f"{dir_}-{img_path}" for img_path in os.listdir(dir_path) if img_path.endswith('.jpg')],
+	    uris=[os.path.join(dir_path, img_path) for img_path in os.listdir(dir_path) if img_path.endswith('.jpg')]
+	)
+
 
 #load documents
 
