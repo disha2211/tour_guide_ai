@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19018867-d3a4-4832-af52-a70173e48cd8" name="Changes" comment="updated requirements.txt">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="19018867-d3a4-4832-af52-a70173e48cd8" name="Changes" comment="func. config geminiAPIkey">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +197,31 @@
       <option name="project" value="LOCAL" />
       <updated>1779441955522</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="GEMINI_API_KEY">
+      <option name="closed" value="true" />
+      <created>1779442811240</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1779442811240</updated>
+    </task>
+    <task id="LOCAL-00014" summary="python-dotenv">
+      <option name="closed" value="true" />
+      <created>1779442828506</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1779442828509</updated>
+    </task>
+    <task id="LOCAL-00015" summary="func. config geminiAPIkey">
+      <option name="closed" value="true" />
+      <created>1779442861836</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1779442861836</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -214,6 +237,9 @@
     <MESSAGE value="load text docs" />
     <MESSAGE value="updated to gemini api key" />
     <MESSAGE value="updated requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated requirements.txt" />
+    <MESSAGE value="GEMINI_API_KEY" />
+    <MESSAGE value="python-dotenv" />
+    <MESSAGE value="func. config geminiAPIkey" />
+    <option name="LAST_COMMIT_MESSAGE" value="func. config geminiAPIkey" />
   </component>
 </project>
