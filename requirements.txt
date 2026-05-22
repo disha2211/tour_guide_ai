@@ -9,4 +9,3 @@ chromadb
 opencv-python
 streamlit
 img2vec_pytorch
-pysqlite3-binary
