@@ -1,4 +1,7 @@
+import os
+
 from chromadb.utils.data_loaders import ImageLoader
+from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 
 from utils import ImageEmbeddings,DATA_PATH,DB_PATH
 
@@ -29,6 +32,16 @@ for dir_ in os.listdir(DATA_PATH):
 img_collection.add(
 	    ids=[f"{dir_}-{img_path}" for img_path in os.listdir(dir_path) if img_path.endswith('.jpg')],
 	    uris=[os.path.join(dir_path, img_path) for img_path in os.listdir(dir_path) if img_path.endswith('.jpg')]
+	)
+
+#   create documents_collection
+#---------------docs -> manage collections -> docs collection
+collection = client_db.create_collection(
+	    name=f"documents_{dir_}",
+	    embedding_function=OpenAIEmbeddingFunction(
+	        api_key=os.getenv("OPENAI_API_KEY"),
+	        model_name="text-embedding-3-small"
+	    )
 	)
 
 
