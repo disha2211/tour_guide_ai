@@ -8,6 +8,9 @@ from utils import ImageEmbeddings,DATA_PATH,DB_PATH
 
 import chromadb
 
+from langchain_community.document_loaders import DirectoryLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -50,7 +53,25 @@ collection = client_db.create_collection(
 
 
 #load documents
+loader = DirectoryLoader(dir_path, glob="*.txt")
+documents = loader.load()
 
 #documents to chunks
+#----------important to chunk text for RAG
+text_splitter = RecursiveCharacterTextSplitter(
+	chunk_size=300,
+	chunk_overlap=100,
+	length_function=len,
+	add_start_index=True,
+)
+
+chunks = text_splitter.split_documents(documents)
 
 #add chunks to documents_collection
+
+
+collection.add(
+	ids=[str(j) for j in range(len(chunks))],
+	documents=[chunks[j].page_content for j in range(len(chunks))],
+	metadatas=[chunks[j].metadata for j in range(len(chunks))],
+)
