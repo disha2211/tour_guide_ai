@@ -1,3 +1,5 @@
+from chromadb.utils.data_loaders import ImageLoader
+
 from utils import ImageEmbeddings,DATA_PATH,DB_PATH
 
 import chromadb
@@ -11,6 +13,12 @@ client_db = chromadb.PersistentClient(path=DB_PATH)
 
 
 #create images_collection
+#---------------docs -> manage collections
+img_collection = client_db.create_collection(
+	name="imgs",
+	embedding_function=ImageEmbeddings(),
+	data_loader=ImageLoader()
+	)
 
 #for each category
 
