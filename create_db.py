@@ -1,7 +1,8 @@
 import os
 
 from chromadb.utils.data_loaders import ImageLoader
-from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
+#-----------using google gemini api key
+from chromadb.utils.embedding_functions import GoogleGeminiEmbeddingFunction
 
 from utils import ImageEmbeddings,DATA_PATH,DB_PATH
 
@@ -37,12 +38,12 @@ img_collection.add(
 #   create documents_collection
 #---------------docs -> manage collections -> docs collection
 collection = client_db.create_collection(
-	    name=f"documents_{dir_}",
-	    embedding_function=OpenAIEmbeddingFunction(
-	        api_key=os.getenv("OPENAI_API_KEY"),
-	        model_name="text-embedding-3-small"
-	    )
-	)
+    name=f"documents_{dir_}",
+    embedding_function=GoogleGeminiEmbeddingFunction(
+        api_key=os.getenv("GEMINI_API_KEY"),
+        model_name="gemini-embedding-001"  # Or "gemini-embedding-2" if you want the latest model
+    )
+)
 
 
 #load documents
