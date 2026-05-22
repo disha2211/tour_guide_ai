@@ -9,6 +9,9 @@ from utils import ImageEmbeddings,DATA_PATH,DB_PATH
 import chromadb
 
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # new chromadb client
 
 #-------------------as working on local machine , just need a persistent client
