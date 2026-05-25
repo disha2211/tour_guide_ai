@@ -7,7 +7,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 from utils import DB_PATH, ImageEmbeddings
-
+from dotenv import load_dotenv
+load_dotenv()
 
 def classify_img(client_db,query_img):
     #-----------docs->manage collection
@@ -72,20 +73,24 @@ def create_response(chunks_text, chunks_metadata, query_question):
     return response.text, chunks_metadata
 
 
-
-#input data: query img, query text
-query_img = None # path to image
-query_question = None  # "when was it built?"
+if __name__ == "__main__":
+    #input data: query img, query text
+    query_img = None # path to image
+    query_question = None  # "when was it built?"
 
 #create chroma db client
 #-----------similar to client created in create_db.py
-client_db = chromadb.PersistentClient(path=DB_PATH)
+    client_db = chromadb.PersistentClient(path=DB_PATH)
 
 #classify image
-img_category=classify_img(client_db,query_img)
+    img_category=classify_img(client_db,query_img)
 
 #get most similar chunks
-chunks_text, chunks_metadata = get_most_similar_chunks(client_db, query_question, img_category)
-#print(chunks_text,chunks_metadata
+    chunks_text, chunks_metadata = get_most_similar_chunks(client_db, query_question, img_category)
+    #print(chunks_text,chunks_metadata
 
 #create response
+    text, sources = create_response(chunks_text, chunks_metadata, query_question)
+
+    print(text)
+    print(sources)
