@@ -13,7 +13,14 @@ def classify_img(client_db,query_img):
     img = cv2.imread(query_img)
     embeddings = embeddingFunction([img])
 
-    #----------docs-> query and get
+    results = collection.query(
+        query_embeddings=embeddings,
+        n_results=1
+    )
+
+    #print(results['ids'][0][0].split('-')[0])---------output:"prague_castle"
+
+    return results['ids'][0][0].split('-')[0]
 
 
 #input data: query img, query text
