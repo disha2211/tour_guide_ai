@@ -50,6 +50,7 @@ client_db = chromadb.PersistentClient(path=DB_PATH)
 img_category=classify_img(client_db,query_img)
 
 #get most similar chunks
-chunks=get_most_similar_chunks(client_db,query_question)
+chunks_text, chunks_metadata = get_most_similar_chunks(client_db, query_question, img_category)
+#print(chunks_text,chunks_metadata
 
 #create response
